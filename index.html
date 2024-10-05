@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODOLIST</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <section class="hero">
+        <div class="container"><div class="form-group col-lg-6 col-md-6 col-sm-9 ">
+            <h1 class="mb-4 ">To Do List  <i class="fa-regular fa-rectangle-list "></i></h1>
+            
+           
+            <div class="row">
+                <div class=" col-lg-6 col-md-6 col-sm-6 ">
+                    <input id="taskinput" type="text" placeholder="Enter Your Task" class="pr-8 p-2 ">
+                    <span class="span1 none">Enter your task</span>
+                    <span class="span2 none">Number of character must more than 3</span>
+                    <span class="span3 none">This Name has been writen before</span>
+
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 ">
+                    <button  id="btn"class="btn btn-info add w-75 mt-3 ">Add Task</button>
+                    
+
+                </div>
+                
+                    
+
+               
+            </div>
+            <div class="d-gird bg-white mt-3">
+                <p  class="text-info">You have <span class="task-count text-success">0</span> Task(s) To Compelete</p>
+            </div>
+           
+            <div class="card">
+                <div class="card-body ">
+                    <div class="col-lg-12">
+                        <div  id="emptytask"class="alert alert-danger">
+                            Empty Task
+
+                        </div>
+
+                    </div>
+                    <div class="col-lg-12">
+                        <div  class="alltask">
+                           
+
+                        </div>
+
+                    </div>
+                  
+                    
+                </div>
+            </div>
+           
+            
+                
+                    <div class="row col-lg-12">
+                        <div class="col-lg-6">
+                            <p class=" mb-4 mt-4 w-25 p1 ">checked:</p>
+
+                        </div>
+                       
+                    </div>
+                        
+                        
+                    
+                    <div class="card">
+                        <div class="card-body ">
+                            
+                               
+                            <div class="col-lg-12">
+                                <div class="complete">
+                                    
+                                </div>
+            </div>
+        </div>
+        
+        </div></div>
+    </div>
+       
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

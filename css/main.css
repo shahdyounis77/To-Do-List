@@ -1,0 +1,146 @@
+body{
+    background-image: url(../img/pexels-content-pixie-1405717-2736499.jpg);
+    background-size: cover;
+}
+
+
+.hero{
+    width: 100%;
+    height: 100vh;
+    
+    position: relative;
+}
+.form-group{
+    position: absolute;
+    top: 100px;
+    background-color: white;
+    border-radius: 6px;
+    margin-left: 200px;
+    padding: 20px;
+}
+.hero h1{
+    color: rgb(241, 176, 97);
+
+}
+.hero h1 i{
+    color: rgb(89, 213, 238);
+
+}
+#taskinput{
+    border: none;
+    border-bottom:2px solid rgb(89, 184, 243);
+}
+#taskinput:focus{
+    outline: none;
+    
+}
+.row input{
+    width: 100%;
+}
+.card{
+    margin-top: 30px;
+}
+.invaild{
+    border: 2px solid rgb(245, 33, 33);
+}
+.none{
+    display: none;
+}
+.span1{
+    color:rgb(245, 33, 33) ;
+}
+.span2{
+    color:rgb(245, 33, 33) ;
+}
+
+
+
+.circle{
+   margin-right: 8px;
+   margin-top: 5px;
+   appearance: none;
+    border-radius: 50%;
+    border: 2px solid black;
+    align-items: center;
+    padding: 8px;
+}
+.circle1{
+    margin-right: 8px;
+    margin-top: 5px;
+    appearance: none;
+     border-radius: 10%;
+     border: 2px solid black;
+     align-items: center;
+     padding: 8px;
+ }
+.checkedparent{
+    background-color: gray;
+    text-decoration: line-through;
+    
+
+}
+.checked{
+    background-color: rgb(140, 246, 137);
+    
+    
+
+}
+.p1{
+    
+   font-size: 30px;
+   color: rgb(241, 176, 97);
+   
+}
+
+@media(max-width:920px){
+    .form-group{
+        position: absolute;
+        top: 200px;
+        background-color: white;
+        border-radius: 6px;
+        margin-left: 150px;
+        padding: 20px;
+    }
+}
+@media(max-width:780px){
+    .form-group{
+        position: absolute;
+        top: 170px;
+        background-color: white;
+        border-radius: 6px;
+        margin-left: 150px;
+        padding: 20px;
+    }
+}
+@media(max-width:750px){
+    .form-group{
+        position: absolute;
+        top: 100px;
+        background-color: white;
+        border-radius: 6px;
+        margin-left: 77px;
+        padding: 20px;
+    }
+}
+@media(max-width:440px){
+    .form-group{
+        position: absolute;
+        top: 100px;
+        background-color: white;
+        border-radius: 6px;
+        margin-left: 14px;
+        padding: 20px;
+    }
+}
+@media(max-width:378px){
+    .form-group{
+        position: absolute;
+        top: 100px;
+        background-color: white;
+        border-radius: 6px;
+        margin-left: 0px;
+        margin-right: 4px;
+        padding: 20px;
+    }
+}
+
