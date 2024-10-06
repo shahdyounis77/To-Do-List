@@ -224,14 +224,34 @@ document.addEventListener('click',function(event){
       
       event.target.parentElement.children[3].removeAttribute('readonly')
       event.target.parentElement.children[3].focus()
+      
+      
       event.target.innerText="Save"
+      
+      
     }
     else{
-      event.target.parentElement.children[3].setAttribute('readonly','readonly')
-      event.target.innerText="Edit"
+      if(event.target.parentElement.children[3].value==""){
+        alert("empty task")
+        event.target.parentElement.children[2].style.display="none"
+        
+      }
+      else if(event.target.parentElement.children[3].value.length<=3){
+        alert("number of character must be more than 3")
+        event.target.parentElement.children[2].style.display="none"
+        
+      }
+      else{
+        event.target.parentElement.children[2].style.display="block"
+        
+        event.target.parentElement.children[3].setAttribute('readonly','readonly')
+        event.target.innerText="Edit"
+      }
 
     }
+    
   }
+ 
 })
 
 
