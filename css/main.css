@@ -1,13 +1,18 @@
 body{
-    background-image: url(../img/pexels-content-pixie-1405717-2736499.jpg);
-    background-size: cover;
+   background-color:#efb772 ;
 }
 
 
+.empty{
+    text-align: center;
+    color: rgb(106, 212, 241);
+    font-size: 20px;
+}
 .hero{
     width: 100%;
     height: 100vh;
-    
+    background:linear-gradient(#3c0202da 50%,
+     #efb772 50%);
     position: relative;
 }
 .form-group{
@@ -17,6 +22,7 @@ body{
     border-radius: 6px;
     margin-left: 200px;
     padding: 20px;
+    
 }
 .hero h1{
     color: rgb(241, 176, 97);
@@ -24,14 +30,53 @@ body{
 }
 .hero h1 i{
     color: rgb(89, 213, 238);
+    animation-name: dark;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-delay:2s ;
 
 }
+@keyframes dark{
+    0%{
+        translate: 10px 0px;
+    }
+    100%{
+        translate: 0px 0px;
+    }
+}
+.dark{
+    padding: 8px;
+    margin: auto;
+    margin-top: 15px;
+    color: #f5ba72;
+    background-color: aliceblue;
+    margin-right: 40px;
+    cursor: pointer;
+    position: absolute;
+    top:558px;
+    left: 130px;
+    border: 1px solid transparent;
+}
+
 #taskinput{
     border: none;
     border-bottom:2px solid rgb(89, 184, 243);
 }
 #taskinput:focus{
     outline: none;
+    
+}
+.textinput{
+    border: none !important;
+    background-color:transparent !important;
+    outline: none;
+    appearance: none;
+    color: rgb(255, 255, 255);
+    
+}
+
+.textinput:not(:read-only){
+    color: black;
     
 }
 .row input{
@@ -128,8 +173,12 @@ body{
         top: 100px;
         background-color: white;
         border-radius: 6px;
-        margin-left: 14px;
+        margin-left: 8px;
         padding: 20px;
+    }
+    .textinput{
+        width: 40%;
+
     }
 }
 @media(max-width:378px){
@@ -141,6 +190,10 @@ body{
         margin-left: 0px;
         margin-right: 4px;
         padding: 20px;
+    }
+    .textinput{
+        width: 30%;
+
     }
 }
 

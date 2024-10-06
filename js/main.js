@@ -7,6 +7,8 @@ let span2=document.querySelector('.span2')
 let span3=document.querySelector('.span3')
 let taskcount=document.querySelector('.task-count')
 let complete=document.querySelector('.complete')
+let empty=document.querySelector('.empty')
+
 
 let tasknumber=0;
 function add(){
@@ -27,14 +29,21 @@ function add(){
         span2.classList.add("none")
         span1.classList.add("none")
         let alert=document.createElement('div')
+        let textinput=document.createElement('input')
+        textinput.type="text"
+        textinput.setAttribute('class','textinput')
+        textinput.setAttribute('readonly','readonly')
+        
+        textinput.value=taskinput.value
         alert.classList.add('alert')
         
         alert.style.backgroundColor='#'+ Math.random().toString(16).slice(2,8)
-        alert.append(taskinput.value)
-        alert.innerHTML+=`<button  class="btn btn-danger float-end  ml-5 delete ">Delete</button>`
+       // alert.innerText=taskinput.value
+        alert.innerHTML+=`<button  class="btn btn-danger float-end  ml-10 delete ">Delete</button>`
+        alert.innerHTML+=`<button  class="btn btn-info float-end text-white  mr-5 edit  ">Edit</button>`
 
         alert.innerHTML+=`<input type="checkbox" class=" circle float-start    check"></input>`
-        
+        alert.append(textinput)
         //alert.innerHTML+=`<i class="fa-solid fa-check float-start i "></i>`
         
         let check=document.querySelector('.check')
@@ -42,11 +51,11 @@ function add(){
         taskinput.value=""
         tasknumber+=1
         displaycount(tasknumber)
-       check1()
-       check2()
-      
+        check1()
+        check2()
        
       
+      console.log(alert.children)
 
         
        
@@ -54,6 +63,7 @@ function add(){
 
       
     }
+   
 
 }
 function checkempty(){
@@ -66,6 +76,7 @@ function checkempty(){
     else{
          emptytask.style.display="none"
     }
+
    
     
 }
@@ -90,6 +101,7 @@ document.addEventListener('click',function(event){
                }
 
                checkempty()
+               checkempty1()
                
                
                
@@ -105,6 +117,7 @@ document.addEventListener('click',function(event){
         if( event.target.classList.contains('check')){
             event.target.classList.toggle('checked')
             event.target.parentElement.classList.toggle('checkedparent')
+            event.target.parentElement.children[3].classList.toggle('checkedparent')
            
 
             
@@ -149,8 +162,13 @@ let check1=()=>{
       
       
       complete.append(alltask.children[i])
+      empty.style.display="none"
+      
+      
+      
       checkempty()
       
+     
       
      
       
@@ -171,7 +189,9 @@ let check2=()=>{
       
       
       alltask.append(complete.children[i])
+      
       checkempty()
+      checkempty1()
       
       
      
@@ -184,6 +204,36 @@ let check2=()=>{
   }
 
 }
+function checkempty1(){
+  if(complete.children.length==0){
+      empty.style.display="block"
+      
+      
+  }
+  else{
+       empty.style.display="none"
+  }
+  
+ 
+  
+}
+document.addEventListener('click',function(event){
+  if(event.target.classList.contains('edit')){
+    
+    if(event.target.innerText=="Edit"){
+      
+      event.target.parentElement.children[3].removeAttribute('readonly')
+      event.target.parentElement.children[3].focus()
+      event.target.innerText="Save"
+    }
+    else{
+      event.target.parentElement.children[3].setAttribute('readonly','readonly')
+      event.target.innerText="Edit"
+
+    }
+  }
+})
+
 
 
 
